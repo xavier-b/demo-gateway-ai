@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: demo-gateway-ai
+server:
+  port: 8090
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: gateway,health
+
+mcp:
+  listener:
+    enabled: true
+    route-ids:
+      - mcp-weather
+    path-patterns: []
+    max-request-bytes: 256KB
+    max-sse-event-bytes: 16KB
+    log-payloads: true
+
+logging:
+  level:
+    com.example.demo_gateway_ai.LoggingGlobalFilter: DEBUG
+    com.example.demo_gateway_ai.RequestLoggingWebFilter: DEBUG
+    com.example.demo_gateway_ai.mcp: DEBUG
+
+#logging:
+#  level:
+#    org.springframework.cloud.gateway: TRACE

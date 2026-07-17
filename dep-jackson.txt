@@ -1,0 +1,8 @@
+com.example:demo-gateway-ai:jar:0.0.1-SNAPSHOT
+\- org.springframework.cloud:spring-cloud-starter-gateway-server-webflux:jar:5.0.1:compile
+   \- org.springframework.boot:spring-boot-starter-webflux:jar:4.0.6:compile
+      \- org.springframework.boot:spring-boot-starter-jackson:jar:4.0.6:compile
+         \- org.springframework.boot:spring-boot-jackson:jar:4.0.6:compile
+            \- tools.jackson.core:jackson-databind:jar:3.1.2:compile
+               +- com.fasterxml.jackson.core:jackson-annotations:jar:2.21:compile
+               \- tools.jackson.core:jackson-core:jar:3.1.2:compile
